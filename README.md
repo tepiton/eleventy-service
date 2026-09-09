@@ -126,7 +126,31 @@ paths. `public/` is for head assets only: favicons and the OG image.
 ### Subpages
 
 `content/pages/*.md` are ordinary pages (About, Work) wired into the
-header nav via `eleventyNavigation` front matter.
+header nav via `eleventyNavigation` front matter. They use the shared
+`_includes/layouts/page.njk` layout, which gives every subpage a hero
+band matching the homepage's design language, plus optional
+frontmatter-driven blocks:
+
+```markdown
+---
+title: Recent projects
+eyebrow: Selected work
+description: One-sentence lede under the title (also the meta description)
+eleventyNavigation: { key: "Work", order: 3 }
+wide: true                         # container-width body (for the work list)
+projects:                          # editorial project rows with tag chips
+  - client: Kettle
+    year: "2026"
+    description: "Full identity and marketing site for a fintech startup."
+    tags: ["Identity", "Web"]
+---
+
+Body prose in Markdown, styled to a comfortable reading measure.
+```
+
+Also available: `stats` (a row of accent figures, as on the About page)
+and `cards` (a card grid, same design as the services section). All
+blocks are optional; a bare `title` plus prose is a fine page.
 
 ## Project structure
 
