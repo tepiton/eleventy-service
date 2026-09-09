@@ -110,6 +110,19 @@ the build with an error naming the file (see
   `pen`, `chat`, `calendar`, `compass`) by name in frontmatter:
   `icon: pen`.
 
+### Images
+
+Page images go in `content/img/` and are referenced root-absolute:
+
+```markdown
+![Studio](/img/studio.jpg)
+```
+
+The build optimizes them automatically (avif/webp variants, lazy
+loading, intrinsic width/height). Do not reference `public/` files with
+`<img>` tags — Eleventy's URL transform rewrites those into broken
+paths. `public/` is for head assets only: favicons and the OG image.
+
 ### Subpages
 
 `content/pages/*.md` are ordinary pages (About, Work) wired into the
@@ -125,12 +138,13 @@ header nav via `eleventyNavigation` front matter.
 │   └── icons/           # inline SVG icon set
 ├── content/
 │   ├── _data/           # metadata.js
+│   ├── img/             # page images, referenced as /img/<file>
 │   ├── sections/        # the homepage: one ordered .md per band
 │   ├── pages/           # about, work
 │   ├── 404.md, sitemap.xml.njk, index.njk
 ├── css/                 # index.css + sections/*.css (inlined per page)
 ├── js/                  # theme-switcher.js
-├── public/              # copied verbatim to the site root (icons, img)
+├── public/              # copied verbatim to the site root (favicons, og image)
 └── scripts/             # generate-icons.mjs
 ```
 

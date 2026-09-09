@@ -51,6 +51,12 @@ node scripts/generate-icons.mjs   # regenerate favicon/apple-touch/og images
   `: ` (colon+space).
 - Nunjucks filter arguments are call syntax:
   `{{ url | absoluteUrl(metadata.url) }}`, not `filter: arg`.
+- Images referenced with `<img>` or `![]()` must live in `content/img/`
+  and be referenced root-absolute (`/img/photo.jpg`); the image
+  transform then optimizes them. Root-absolute src paths pointing into
+  `public/` get rewritten to broken relative paths by
+  InputPathToUrlTransformPlugin. `public/` is for favicon/OG head links
+  only - `<link>` hrefs pass through untouched.
 
 ## Theme system
 
