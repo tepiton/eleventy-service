@@ -4,18 +4,22 @@
 //
 //   node scripts/generate-icons.mjs
 //
-// Change the accent color here, run the script, and commit the results.
+// The accent comes from metadata.js's `brand` block — change it there,
+// run the script, and commit the results.
 
 import { mkdir, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import sharp from "sharp";
+import metadata from "../content/_data/metadata.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 
+// BG matches --color-bg (a neutral; lives in css/index.css). The accent
+// is brand-owned, so it shares its source with the CSS.
 const BG = "#1a1d23";
-const ACCENT = "#e0a370";
+const ACCENT = metadata.brand.accent[0];
 
 // A beacon over the horizon line: the Harborlight mark.
 const BEACON = `

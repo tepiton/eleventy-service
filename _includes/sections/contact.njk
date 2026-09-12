@@ -7,10 +7,11 @@
 			<div class="contact-lede">{{ section.templateContent | safe }}</div>
 			{%- endif %}
 			<dl class="contact-details">
-				{%- if section.data.email %}
+				{%- set email = section.data.email or metadata.email %}
+				{%- if email %}
 				<div class="contact-row">
 					<dt>Email</dt>
-					<dd><a href="mailto:{{ section.data.email }}">{{ section.data.email }}</a></dd>
+					<dd><a href="mailto:{{ email }}">{{ email }}</a></dd>
 				</div>
 				{%- endif %}
 				{%- if section.data.phone %}
@@ -35,6 +36,10 @@
 			{%- if section.data.cta %}
 			<div class="contact-actions">
 				<a class="button button-large" href="{{ section.data.cta.href }}">{{ section.data.cta.label }}</a>
+			</div>
+			{%- elif metadata.email %}
+			<div class="contact-actions">
+				<a class="button button-large" href="mailto:{{ metadata.email }}">Email us</a>
 			</div>
 			{%- endif %}
 		</div>

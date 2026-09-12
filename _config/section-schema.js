@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
+import metadata from "../content/_data/metadata.js";
 
 // Section types this template knows about. Each maps 1:1 to a partial in
 // _includes/sections/<type>.njk and a stylesheet in css/sections/<type>.css.
@@ -38,11 +39,12 @@ export function validateSection(data) {
 			if (value.type === "process") requireArray(ctx, "steps");
 			if (value.type === "testimonials") requireArray(ctx, "quotes");
 			if (value.type === "faq") requireArray(ctx, "items");
-			if (value.type === "contact" && typeof value.email !== "string") {
+			if (value.type === "contact" && typeof value.email !== "string" && typeof metadata.email !== "string") {
 				ctx.addIssue({
 					code: z.ZodIssueCode.custom,
 					path: ["email"],
-					message: 'is required when type is "contact"',
+					message:
+						'is required when type is "contact" (set it here or as `email` in content/_data/metadata.js)',
 				});
 			}
 		})
