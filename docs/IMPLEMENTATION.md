@@ -16,6 +16,12 @@
 - [x] Beacon mark icons + OG generated via sharp
 - [x] Clean build verified; sitemap lists only real pages
 - [x] README, CLAUDE.md, docs
+- [x] Real subpage layout (page.njk): hero band, stats/cards/projects
+      blocks, wide mode; About and Work rewritten with demo content
+- [x] mimeo.template.json manifest for deploy-time parameterization
+- [x] Branding centralized in metadata.js (email + accent palette);
+      base.njk, contact section, generate-icons.mjs all read from it
+- [x] Demo prose follows the brand via nunjucks-rendered markdown
 
 See: chronicles/phase-0-foundation.md
 

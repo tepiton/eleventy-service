@@ -35,3 +35,22 @@ prose-blog de-personalization passes.
 
 **Decision:** Subpages are About and Work; a services business sells
 evidence, not tiers.
+
+### DEC-S5: Branding centralized in metadata.js (2026-09-11)
+
+**Status:** accepted
+
+**Decision:** metadata.js is the single source for email and brand
+accent colors ([dark, light] pairs); base.njk, the contact section, and
+generate-icons.mjs all read from it instead of hardcoding values. A
+rebrand (new client, new template instance) is a one-file edit.
+
+### DEC-S6: Demo prose interpolates brand where possible (2026-09-11)
+
+**Status:** accepted
+
+**Decision:** Markdown bodies render through nunjucks
+(markdownTemplateEngine: njk) so prose can reference
+{{ metadata.title }} and stay in sync with the brand automatically.
+Frontmatter string fields (quotes, ledes) can't interpolate, so those
+were hand-written brand-neutral instead.

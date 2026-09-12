@@ -1,14 +1,15 @@
 ---
 phase: 0
 phase_name: foundation
-updated: 2026-09-08
-last_commit: (see git log)
+updated: 2026-09-11
+last_commit: 37efa18
 ---
 
 # Current Focus
 
-Foundation build complete; template builds clean. Next: visual pass with
-eleventy-product, then publish prep.
+Foundation build complete: section engine, page layout, mimeo deploy
+manifest, and centralized branding are all in and verified. Next:
+publish prep (tepiton, clone into TEMPLATES/).
 
 # Active Tasks
 
@@ -19,12 +20,16 @@ None open in this repo.
 - Section engine, design system, and demo content are in and verified
   (clean build, schema fires on bad front matter, no stray section
   pages, css fully inlined per page)
-- Cross-cutting decisions live in the kincaid meta-repo docs/
-  (~/projects/kincaid/docs/DECISIONS.md); this file tracks repo-local
-  state only
+- Subpages use layouts/page.njk (hero + stats/cards/projects blocks),
+  shared with eleventy-product - keep them in sync
+- Branding (email, accent palette) is centralized in metadata.js; a
+  rebrand is a one-file edit (see DEC-S5)
+- Demo prose renders through nunjucks so it interpolates
+  {{ metadata.title }} where frontmatter can't (see DEC-S6)
 - Demo brand: Harborlight Studio (placeholder, de-personalized)
 - Warm palette variant; cool variant lives in eleventy-product
 
 # Next Session
 
-Visual pass feedback and any copy/CSS polish.
+Publish prep: create tepiton/eleventy-service, verify pages.yml is
+byte-identical to the family workflow, clone into TEMPLATES/.

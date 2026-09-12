@@ -30,3 +30,24 @@
 - Verified in-browser: hero bands centered with border, 3-column
   contact cards, 4 project rows with 9 tag chips, nav intact, no
   horizontal overflow.
+
+## Session 3 - 2026-09-10/11
+
+- Added mimeo.template.json (js-key url -> https://{domain}/, url
+  placeholder normalized to https://example.com/); trimmed
+  author.email/author.url since no layout read them.
+- Centralized branding in metadata.js: email (drives the contact band,
+  frontmatter override still wins) and a brand block of [dark, light]
+  accent pairs; base.njk re-emits accent/link tokens from it and
+  generate-icons.mjs reads its accent from the same source - a rebrand
+  is now one file. Fixed a stray blue dark-mode link-hover left over
+  from the product palette. mimeo.template.json email parameterized
+  (hello@{domain}) same as url. README gained a Make-it-yours checklist.
+- Made demo prose follow the brand: hero/about bodies render through
+  nunjucks (markdownTemplateEngine: njk) so {{ metadata.title }}
+  interpolates; frontmatter fields can't interpolate, so the
+  testimonial quote and about lede were rewritten brand-neutral, and
+  "Where the name comes from" became "The standard". metadata.js hoists
+  the name to a const so description follows title edits too.
+
+See: DEC-S5, DEC-S6
