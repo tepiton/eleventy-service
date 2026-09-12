@@ -8,8 +8,9 @@ last_commit: 37efa18
 # Current Focus
 
 Foundation build complete: section engine, page layout, mimeo deploy
-manifest, and centralized branding are all in and verified. Next:
-publish prep (tepiton, clone into TEMPLATES/).
+manifest, and centralized branding are all in and verified. Published
+to tepiton/eleventy-service and living in TEMPLATES/ - nothing open in
+this repo.
 
 # Active Tasks
 
@@ -31,5 +32,4 @@ None open in this repo.
 
 # Next Session
 
-Publish prep: create tepiton/eleventy-service, verify pages.yml is
-byte-identical to the family workflow, clone into TEMPLATES/.
+No open work. Pick up here only when new feature work is requested.

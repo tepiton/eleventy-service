@@ -27,4 +27,5 @@ See: chronicles/phase-0-foundation.md
 
 ## Current State
 
-Builds clean. Deferred: tepiton publish, clone into TEMPLATES/.
+Builds clean. Published to tepiton/eleventy-service; living in
+TEMPLATES/. Nothing deferred.
