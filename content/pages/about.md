@@ -1,7 +1,7 @@
 ---
 title: A small studio, on purpose
 eyebrow: About
-description: Harborlight is two designers who would rather do four projects well than twelve adequately.
+description: Two designers who would rather do four projects well than twelve adequately.
 eleventyNavigation: { key: "About", order: 2 }
 stats:
   - { value: "2019", label: "Founded" }
@@ -14,7 +14,7 @@ stats:
 
 Every agency deck promises a senior team. Then the work arrives and the
 people on the calls are not the people in the deck. We fixed that by
-removing the layer: when you hire Harborlight, you get Harborlight.
+removing the layer: when you hire {{ metadata.title }}, you get {{ metadata.title }}.
 Two designers, no account managers, no juniors quietly doing the work.
 
 The trade is honest - we take fewer projects, so we can be in the room
@@ -31,8 +31,7 @@ for all of yours.
 - **Handover is the product.** A project is not done when it looks
   done. It is done when your team can run it without us.
 
-## Where the name comes from
+## The standard
 
-A harbor light does one thing, reliably, in all weather. That is the
-standard. [See how a project runs](/#process) or
-[look at the work](/work/).
+A studio should do one thing, reliably, in all weather. [See how a
+project runs](/#process) or [look at the work](/work/).

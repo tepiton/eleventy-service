@@ -3,7 +3,7 @@ title: What clients say
 type: testimonials
 order: 40
 quotes:
-  - quote: "Harborlight rebuilt our site in five weeks and our signup rate doubled. The surprising part was how little of our time it took."
+  - quote: "The studio rebuilt our site in five weeks and our signup rate doubled. The surprising part was how little of our time it took."
     name: "Dana Okafor"
     role: "Co-founder, Kettle"
   - quote: "The handover was the best I have seen in fifteen years of engineering. Everything was named, documented, and where I expected it."

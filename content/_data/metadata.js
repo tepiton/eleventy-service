@@ -1,8 +1,10 @@
+const title = "Harborlight Studio";
+
 export default {
-	title: "Harborlight Studio",
+	title,
 	tagline: "Design for teams that would rather ship than deliberate",
 	description:
-		"Harborlight is a small design studio for growing teams: brand identity, websites, and product interfaces built with calm, considered craft. Placeholder brand for the eleventy-service template.",
+		`${title} is a small design studio for growing teams: brand identity, websites, and product interfaces built with calm, considered craft. Placeholder brand for the eleventy-service template.`,
 	url: "https://example.com/",
 	email: "hello@example.com",
 	language: "en",
