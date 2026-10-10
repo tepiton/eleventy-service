@@ -31,6 +31,9 @@ See: chronicles/phase-0-foundation.md
 - [x] npm 12 install hygiene: stale sharp pin dropped, engines >=22,
       `.nvmrc` 24, `.npmrc` fund/audit silenced (DEC-S7); fresh
       installs silent
+- [x] README drift cleanup (2026-10-09): retired eleventy-folio link
+      dropped from the family list, Deploy section corrected to
+      Node 24
 
 See: chronicles/phase-1-maintenance.md
 

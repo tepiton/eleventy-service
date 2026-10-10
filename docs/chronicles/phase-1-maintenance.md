@@ -16,3 +16,17 @@
   `npm audit` still works on demand.
 
 See: DEC-S7
+
+## Session 2 — 2026-10-09
+
+- Two README fixes, no code changed. Dropped the eleventy-folio link
+  from the family list — folio was retired 2026-10-04 in the template
+  consolidation (recorded in tepiton/TEMPLATES/docs); chapbook now
+  alone covers chaptered literary sites.
+- Deploy section corrected "Node 20" → "Node 24" to match pages.yml
+  (node-version: 24); the drift dates to the 2026-10-03 engines-floor
+  raise.
+- Also added phase-1-maintenance.md to the CHRONICLE.md index, stale
+  since Phase 1 began.
+
+No new decisions. See: tepiton/TEMPLATES/docs (folio retirement)
