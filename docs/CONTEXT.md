@@ -1,15 +1,15 @@
 ---
 phase: 1
 phase_name: maintenance
-updated: 2026-10-03
-last_commit: 10a47c9
+updated: 2026-10-09
+last_commit: b5894ce
 ---
 
 # Current Focus
 
-npm 12 install-hygiene pass complete (Phase 1): silent fresh installs,
-truthful Node floor, stale allowScripts pin gone. Nothing else open in
-this repo.
+README drift cleanup complete (Phase 1): retired folio link dropped
+from the family list, Deploy section corrected to Node 24. No open
+work in this repo.
 
 # Active Tasks
 
@@ -28,9 +28,12 @@ this repo.
   {{ metadata.title }} where frontmatter can't (see DEC-S6)
 - Warm palette variant; cool variant lives in eleventy-product
 - npm 12: `allowScripts` pins `fsevents@2.3.3` only (sharp 0.35.x has
-  no install script); engines >=22, `.nvmrc` 24
+  no install script); engines >=22, `.nvmrc` 24, CI node-version 24
 - Remaining audit findings are braces→chokidar, dev-server-only and
   unfixable on eleventy 3; hidden from install output only (DEC-S7)
+- eleventy-folio retired 2026-10-04 (template consolidation, recorded
+  in tepiton/TEMPLATES/docs); family is five siblings + product +
+  service now
 
 # Next Session
 
