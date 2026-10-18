@@ -89,7 +89,7 @@ variant. Keep the engine and theme mechanics identical between the two.
   hyphens only (em dashes break bash heredocs). `git pull --rebase`
   before pushing.
 - Changes that apply to "all eleventy templates" must eventually touch
-  all seven dirs (five siblings + product + service).
+  all six dirs (four siblings + product + service).
 
 ## Related
 
